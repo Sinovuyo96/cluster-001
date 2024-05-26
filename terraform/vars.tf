@@ -4,8 +4,3 @@ variable "terraform_state_bucket_name" {
     default = "eks-application-state-bucket"
 }
 
-variable "table_name" {
-    type        = string
-    description = "dynamodb table used to manage state lock"
-    default     = "dynamodb_state_lock"
-}
