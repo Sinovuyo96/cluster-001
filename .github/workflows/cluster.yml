@@ -41,4 +41,4 @@ jobs:
       - name: Terraform Apply Stage
         run: |
           cd terraform/
-          terraform apply -auto-approve
+          terraform apply -auto-approve -lock=false
