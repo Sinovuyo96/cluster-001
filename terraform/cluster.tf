@@ -2,11 +2,6 @@
 # EKS Networking
 ####################
 
-variable "vpc_id" {
-  default = "vpc-0c2777ad1709f46d7"
-  type = string
-}
-
 data "aws_vpc" "selected" {
   id = var.vpc_id
 }
