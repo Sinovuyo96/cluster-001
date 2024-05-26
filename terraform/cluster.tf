@@ -37,7 +37,7 @@ data "aws_vpc" "selected" {
 ####################
 
 resource "aws_eks_cluster" "rancher-cluster" {
-  name     = "Rancher"
+  name     = "cluster-001"
   role_arn = aws_iam_role.eks_cluster_and_eks_nodes_role.arn
 
   vpc_config {
