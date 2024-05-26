@@ -37,7 +37,7 @@ jobs:
           pwd
           ls
           cd terraform/
-          terraform plan
+          terraform plan -lock=false
       - name: Terraform Apply Stage
         run: |
           cd terraform/
