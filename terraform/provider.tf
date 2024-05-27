@@ -3,12 +3,12 @@ provider aws {
 }
 
 provider "kubernetes" {
-  config_path    = "~/.kube/config"
-  config_context = "current-context"
+#  config_path    = "~/.kube/config"
+#  config_context = "current-context"
 }
 
-resource "kubernetes_namespace" "nginx-ns" {
-  metadata {
-    name = "nginx"
-  }
-}
+#resource "kubernetes_namespace" "nginx-ns" {
+#  metadata {
+#    name = "nginx"
+#  }
+#}
