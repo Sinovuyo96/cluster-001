@@ -2,10 +2,13 @@ provider aws {
   region = "us-east-1"
 }
 
-provider kubernetes {
-
+provider "kubernetes" {
+  config_path    = "~/.kube/config"
+  config_context = "current-context"
 }
 
-provider helm {
-
+resource "kubernetes_namespace" "nginx-ns" {
+  metadata {
+    name = "nginx"
+  }
 }
