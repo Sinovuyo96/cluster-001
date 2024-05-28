@@ -1,18 +1,10 @@
-# resource "kubernetes_service_account" "aws_alb_controller_svc_acc" {
-#   metadata {
-#     name = "aws-load-balancer-controller"
-#   }
-# }
 
-# resource "kubernetes_secret" "example" {
+# resource "kubernetes_service_account" "aws_load_balancer_controller" {
 #   metadata {
+#     name      = "aws-load-balancer-controller"
+#     namespace = "kube-system"
 #     annotations = {
-#       "kubernetes.io/service-account.name" = kubernetes_service_account.aws_alb_controller_svc_acc.metadata.0.name
+#       "eks.amazonaws.com/role-arn" = aws_iam_role.aws_load_balancer_controller.arn
 #     }
-
-#     generate_name = "aws-alb-ingress-svc-account-secret"
 #   }
-
-#   type                           = "kubernetes.io/service-account-token"
-#   wait_for_service_account_token = true
 # }
