@@ -60,8 +60,9 @@ jobs:
           sudo mv /tmp/eksctl /usr/local/bin
           eksctl utils associate-iam-oidc-provider --cluster=cluster-001 --approve
           
-      - name : Install Ingress ALB
+      - name : Access Cluster & Install Ingress ALB
         run: |
+           aws eks update-kubeconfig --name cluster-001 --region us-east-1
            helm repo add eks https://aws.github.io/eks-charts
            helm repo update eks
            helm search repo eks -l
