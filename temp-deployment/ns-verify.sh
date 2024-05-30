@@ -2,7 +2,7 @@
 #!/bin/bash
 
 # List of namespaces
-NAMESPACES=("nginx" "argocd")
+NAMESPACES=("nginx" "argocd" "grafana")
 
 for NAMESPACE in "${NAMESPACES[@]}"; do
   if ! kubectl get namespace "$NAMESPACE" >/dev/null 2>&1; then
