@@ -71,6 +71,7 @@ jobs:
       - name: Deploy to EKS
         run: |
           cd  temp-deployment/
+          . ns-verify.sh
           kubectl apply -f ingress-resource.yaml
           kubectl apply -f svc.yaml
           kubectl apply -f deployment.yaml
