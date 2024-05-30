@@ -70,7 +70,7 @@ jobs:
       
       - name: Deploy to EKS
         run: |
-          cd  terraform/
+          cd  temp-deployment/
           kubectl apply -f ingress-resource.yaml
           kubectl apply -f svc.yaml
           kubectl apply -f deployment.yaml
