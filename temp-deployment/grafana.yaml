@@ -51,7 +51,7 @@ metadata:
     alb.ingress.kubernetes.io/scheme: "internet-facing"
     alb.ingress.kubernetes.io/actions.default: >
       {"Type": "forward", "ForwardConfig": {"TargetGroups": [{"ServiceName": "grafana-service", "ServicePort": "3000"}]}}
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 3000}]'
     alb.ingress.kubernetes.io/subnets: subnet-03a226f4f95726e02, subnet-08ab9437cc511cb37
 spec:
   ingressClassName: alb
