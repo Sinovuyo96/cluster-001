@@ -58,9 +58,9 @@ resource "aws_eks_cluster" "dev_cluster" {
 
 
 output "endpoint" {
-  value = aws_eks_cluster.rancher-cluster.endpoint
+  value = aws_eks_cluster.dev_cluster.endpoint
 }
 
 output "kubeconfig-certificate-authority-data" {
-  value = aws_eks_cluster.rancher-cluster.certificate_authority[0].data
+  value = aws_eks_cluster.dev_cluster.certificate_authority[0].data
 }
