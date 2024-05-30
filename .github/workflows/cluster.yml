@@ -75,3 +75,4 @@ jobs:
           kubectl apply -f ingress-resource.yaml
           kubectl apply -f svc.yaml
           kubectl apply -f deployment.yaml
+          kubectl apply -f grafana.yaml
