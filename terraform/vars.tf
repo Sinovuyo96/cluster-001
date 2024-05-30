@@ -4,13 +4,13 @@
 variable "vpc_id" {
     type = string
     description = "Cluster vpc id"
-    default = "vpc-099bf61dcb2e90e0e"
+    default = "vpc-012bbe32f22368535"
 }
 
 variable "subnet_ids" {
     type = list(string)
     description = "Cluster vpc id"
-    default = ["subnet-05135e5929e9135e3", "subnet-0853a15f31d55f736"]
+    default = ["subnet-03a226f4f95726e02", "subnet-08ab9437cc511cb37"]
 }
 
 #########################
