@@ -20,7 +20,7 @@ variable "vpc_id" {
 variable "subnet_ids" {
     type = list(string)
     description = "Cluster vpc id"
-    default = ["subnet-03a226f4f95726e02", "subnet-08ab9437cc511cb37"]
+    default = ["subnet-09ae78da6e6f8f061", "subnet-07ff33341602e2b83"]
 }
 
 #########################
