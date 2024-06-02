@@ -76,7 +76,7 @@ jobs:
         run: |
           cd  temp-deployment/
           . ns-verify.sh
-          kubectl apply -f ingress-resource.yaml
           kubectl apply -f svc.yaml
           kubectl apply -f deployment.yaml
           kubectl apply -f grafana.yaml
+          kubectl apply -f ingress-resource.yaml
