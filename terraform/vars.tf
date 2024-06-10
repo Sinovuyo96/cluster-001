@@ -14,13 +14,13 @@ variable "terraform_state_bucket_name" {
 variable "vpc_id" {
     type = string
     description = "Cluster vpc id"
-    default = "vpc-0513cb94f026bf31d"
+    default = "vpc-0adf3e852d182ba30"
 }
 
 variable "subnet_ids" {
     type = list(string)
     description = "Cluster vpc id"
-    default = ["subnet-0b3f852e2b0850c18", "subnet-0b9b4a4e179948c5b"]
+    default = ["subnet-0520793f759214bbd", "subnet-082a73a6f9c025b61"]
 }
 
 #########################
