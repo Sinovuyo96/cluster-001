@@ -50,7 +50,7 @@ variable "node_group_name" {
 #     default = "kube-system"
 # }
 
-# variable "role_name" {
-#     type = string
-#     default = "AmazonEKSLoadBalancerControllerRole"
-# }
+ variable "role_name" {
+     type = string
+     default = "AmazonEKSLoadBalancerControllerRole"
+ }
