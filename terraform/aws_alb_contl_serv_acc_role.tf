@@ -1,38 +1,38 @@
-# #################################################
-# #  ServiceAccount Roles for aws alb controller
-# #################################################
-# resource "aws_iam_role" "eks_load_balancer_controller_role" {
-#   name = var.role_name
+#################################################
+#  ServiceAccount Roles for aws alb controller
+#################################################
+resource "aws_iam_role" "eks_load_balancer_controller_role" {
+  name = var.role_name
 
-#   assume_role_policy = jsonencode({
-#     Version = "2012-10-17"
-#     Statement = [
-#       {
-#         Effect = "Allow"
-#         Principal = {
-#           Federated = "arn:aws:iam::905418086103:oidc-provider/oidc.eks.us-east-1.amazonaws.com/id/EF613A0C154944C56FA8E2C27D0BAF28"
-#         }
-#         Action = "sts:AssumeRoleWithWebIdentity"
-#         Condition = {
-#           StringEquals = {
-#             "oidc.eks.us-east-1.amazonaws.com/id/EF613A0C154944C56FA8E2C27D0BAF28:aud" = "sts.amazonaws.com"
-#             "oidc.eks.us-east-1.amazonaws.com/id/EF613A0C154944C56FA8E2C27D0BAF28:sub" = "system:serviceaccount:kube-system:aws-load-balancer-controller"
-#           }
-#         }
-#       }
-#     ]
-#   })
-# }
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Principal = {
+          Federated = "arn:aws:iam::381492126797:oidc-provider/oidc.eks.us-east-1.amazonaws.com/id/69F476E8726794E5ECBF8219D2617A56"
+        }
+        Action = "sts:AssumeRoleWithWebIdentity"
+        Condition = {
+          StringEquals = {
+            "oidc.eks.us-east-1.amazonaws.com/id/69F476E8726794E5ECBF8219D2617A56:aud" = "sts.amazonaws.com"
+            "oidc.eks.us-east-1.amazonaws.com/id/69F476E8726794E5ECBF8219D2617A56:sub" = "system:serviceaccount:kube-system:aws-load-balancer-controller"
+          }
+        }
+      }
+    ]
+  })
+}
 
-# resource "aws_iam_policy_attachment" "eks_load_balancer_controller_policy_attachment" {
-#   name       = "eks-load-balancer-controller-policy-attachment"
-#   policy_arn = "arn:aws:iam::905418086103:policy/AWSLoadBalancerControllerIAMPolicy"
-#   roles      = [aws_iam_role.eks_load_balancer_controller_role.name]
-# }
+resource "aws_iam_policy_attachment" "eks_load_balancer_controller_policy_attachment" {
+   name       = "eks-load-balancer-controller-policy-attachment"
+   policy_arn = "arn:aws:iam::381492126797:policy/AWSLoadBalancerControllerIAMPolicy"
+   roles      = [aws_iam_role.eks_load_balancer_controller_role.name]
+ }
 
-# output "eks_load_balancer_controller_role_arn" {
-#   value = aws_iam_role.eks_load_balancer_controller_role.arn
-# }
+ output "eks_load_balancer_controller_role_arn" {
+   value = aws_iam_role.eks_load_balancer_controller_role.arn
+ }
 
 # ########################################################
 # # aws alb controller service account policy
