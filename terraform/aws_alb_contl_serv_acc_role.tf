@@ -205,3 +205,4 @@ resource "aws_iam_policy_attachment" "eks_load_balancer_controller_policy_attach
       values   =  ["CreateSecurityGroup"]
     }
  }
+}
