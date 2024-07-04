@@ -45,10 +45,10 @@ variable "node_group_name" {
      default = "aws-load-balancer-controller"
  } 
 
-# variable "namespace" {
-#     type = string
-#     default = "kube-system"
-# }
+ variable "namespace" {
+     type = string
+     default = "kube-system"
+ }
 
  variable "role_name" {
      type = string
