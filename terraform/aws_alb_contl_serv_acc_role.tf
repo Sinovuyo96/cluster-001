@@ -205,4 +205,25 @@ resource "aws_iam_policy_attachment" "eks_load_balancer_controller_policy_attach
       values   =  ["CreateSecurityGroup"]
     }
  }
+
+ statement {
+    effect    = "Allow"
+    resources = ["*"]
+    actions   = [
+      "ec2:CreateTags",
+      "ec2:CreateTags",
+      "ec2:DeleteTags"
+    ]
+    condition {
+      test     = "StringEquals"
+      variable = "ec2:CreateAction"
+      values   =  ["CreateSecurityGroup"]
+    }
+    condition {
+        test     = "Null"
+        variable = "aws:RequestTag/elbv2.k8s.aws/cluster"
+        values   = ["false"]
+      }
+ }
+}
 }
