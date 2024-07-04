@@ -191,7 +191,8 @@ resource "aws_iam_policy_attachment" "eks_load_balancer_controller_policy_attach
     actions   = ["ec2:AttachVolume"]
     condition {
       test     = "StringEquals"
-      variable = "iam:AWSServiceName": "elasticloadbalancing.amazonaws.com"
+      variable = "iam:AWSServiceName" 
+      values = ["elasticloadbalancing.amazonaws.com"]
     }
 
   statement {
@@ -200,6 +201,7 @@ resource "aws_iam_policy_attachment" "eks_load_balancer_controller_policy_attach
     actions   = ["ec2:AttachVolume"]
     condition {
       test     = "StringEquals"
-      variable = "ec2:CreateAction": "CreateSecurityGroup"
+      variable = "ec2:CreateAction"
+      values   =  ["CreateSecurityGroup"]
     }
  }
