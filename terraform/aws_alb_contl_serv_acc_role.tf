@@ -194,4 +194,5 @@ statement {
       variable = "iam:AWSServiceName" 
       values = ["elasticloadbalancing.amazonaws.com"]
     }
+  }
 }
