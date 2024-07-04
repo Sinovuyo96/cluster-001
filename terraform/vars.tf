@@ -54,3 +54,8 @@ variable "node_group_name" {
      type = string
      default = "AmazonEKSLoadBalancerControllerRole"
  }
+ variable "svc_acc_policy" {
+     type = string
+     default = "AWSLoadBalancerControllerIAMPolicy"
+ }
+
