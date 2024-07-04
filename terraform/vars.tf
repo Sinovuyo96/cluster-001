@@ -40,10 +40,10 @@ variable "node_group_name" {
 # aws alb service account settings
 #######################################
 
-# variable "aws_alb_serv_account_name" {
-#     type = string
-#     default = "aws-load-balancer-controller"
-# } 
+ variable "aws_alb_serv_account_name" {
+     type = string
+     default = "aws-load-balancer-controller"
+ } 
 
 # variable "namespace" {
 #     type = string
