@@ -24,14 +24,14 @@ resource "aws_iam_role" "eks_load_balancer_controller_role" {
   })
 }
 
-resource "aws_iam_policy" "policy" {
-  name        = "serv_acc_alb_ingress_policy"
+resource "aws_iam_policy" "svc_acc_policy" {
+  name        = var.svc_acc_policy
   policy = data.aws_iam_policy_document.eks_load_balancer_controller_policy.json
 }
 
 resource "aws_iam_policy_attachment" "eks_load_balancer_controller_policy_attachment" {
    name       = "eks-load-balancer-controller-policy-attachment"
-   policy_arn = "arn:aws:iam::381492126797:policy/AWSLoadBalancerControllerIAMPolicy"
+   policy_arn = aws_iam_policy.svc_acc_policy.arn
    roles      = [aws_iam_role.eks_load_balancer_controller_role.name]
  }
 
