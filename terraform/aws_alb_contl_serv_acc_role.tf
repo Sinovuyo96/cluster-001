@@ -184,4 +184,14 @@ resource "aws_iam_policy_attachment" "eks_load_balancer_controller_policy_attach
                   
        ]
      }
+
+statement {
+    effect    = "Allow"
+    resources = ["*"]
+    actions   = ["ec2:AttachVolume"]
+    condition {
+      test     = "StringEquals"
+      variable = "iam:AWSServiceName" 
+      values = ["elasticloadbalancing.amazonaws.com"]
+    }
 }
