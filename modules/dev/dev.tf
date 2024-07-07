@@ -1,5 +1,5 @@
 module "eks-cluster-us-east-1" {
-  source                      = "../terraform/"
+  source                      = "../../terraform/"
   terraform_state_bucket_name = "temp-terraform-state-bucket-name-2024"
     
   # Networking configs
