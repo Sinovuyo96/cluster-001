@@ -12,7 +12,7 @@ module "eks-cluster-us-east-1" {
   
   # ingress alb service account
   aws_alb_serv_account_name   = "aws-load-balancer-controller"
-  namespace                   = "kube-system"
+#  namespace                   = "kube-system"
   role_name                   = "AmazonEKSLoadBalancerControllerRole"
   svc_acc_policy              = "AWSLoadBalancerControllerIAMPolicy"
 }
