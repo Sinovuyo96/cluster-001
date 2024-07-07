@@ -34,15 +34,15 @@ jobs:
 
       - name: Terraform Validate init Stage
         run: |
-          cd terraform/modules/dev
+          cd modules/dev
           terraform init
       - name: Terraform Plan Stage
         run: |
           pwd
           ls
-          cd terraform/modules/dev
+          cd modules/dev
           terraform plan -lock=false
       - name: Terraform Apply Stage
         run: |
-          cd terraform/
+          cd modules/dev
           terraform apply -auto-approve -lock=false
