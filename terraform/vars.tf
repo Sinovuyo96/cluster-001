@@ -3,7 +3,7 @@
 ############################
 
 variable "terraform_state_bucket_name" {
-    type = string
+#    type = string
     default = "temp-terraform-state-bucket-name-2024"
     description = "Terraform state bucket"
 }
@@ -14,13 +14,13 @@ variable "terraform_state_bucket_name" {
 variable "vpc_id" {
     type = string
     description = "Cluster vpc id"
-    default = "vpc-0ddbe56491f34ab1a"
+#    default = "vpc-0ddbe56491f34ab1a"
 }
 
 variable "subnet_ids" {
     type = list(string)
     description = "Cluster vpc id"
-    default = ["subnet-07cb6040dfb8d76f5", "subnet-0edf310825a857979"]
+#    default = ["subnet-07cb6040dfb8d76f5", "subnet-0edf310825a857979"]
 }
 
 #########################
@@ -28,12 +28,12 @@ variable "subnet_ids" {
 #########################
 variable "cluster_name" {
     type = string
-    default = "cluster-001"
+#    default = "cluster-001"
 }
 
 variable "node_group_name" {
     type = string
-    default = "node-group-001"
+#    default = "node-group-001"
 } 
 
 #######################################
@@ -42,7 +42,7 @@ variable "node_group_name" {
 
  variable "aws_alb_serv_account_name" {
      type = string
-     default = "aws-load-balancer-controller"
+#     default = "aws-load-balancer-controller"
  } 
 
  #variable "namespace" {
@@ -52,10 +52,10 @@ variable "node_group_name" {
 
  variable "role_name" {
      type = string
-     default = "AmazonEKSLoadBalancerControllerRole"
+ #    default = "AmazonEKSLoadBalancerControllerRole"
  }
  variable "svc_acc_policy" {
      type = string
-     default = "AWSLoadBalancerControllerIAMPolicy"
+ #    default = "AWSLoadBalancerControllerIAMPolicy"
  }
 
