@@ -1,5 +1,5 @@
-module "cluster_creation_us-east-1"{
-  source                      = "terraform/modules/dev"
+module "eks-cluster-us-east-1" {
+  source                      = "/terraform/modules/dev"
   terraform_state_bucket_name = "temp-terraform-state-bucket-name-2024"
     
   # Networking configs
@@ -16,3 +16,8 @@ module "cluster_creation_us-east-1"{
   role_name                   = "AmazonEKSLoadBalancerControllerRole"
   svc_acc_policy              = "AWSLoadBalancerControllerIAMPolicy"
 }
+
+#temp/remove after testing
+#providers "aws" {
+#  region = "us-east-1"
+#}
