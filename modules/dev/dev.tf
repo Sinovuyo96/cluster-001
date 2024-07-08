@@ -1,6 +1,6 @@
 module "eks-cluster-us-east-1" {
   source                      = "../../terraform/"
-  terraform_state_bucket_name = "temp-terraform-state-bucket-name-2024"
+  terraform_state_bucket_name = "temp-terraform-state-bucket-name-2024-dev"
     
   # Networking configs
   vpc_id                      = "vpc-00030f56014018499"
