@@ -3,8 +3,8 @@
 ############################
 
 variable "terraform_state_bucket_name" {
-#    type = string
-    default = "temp-terraform-state-bucket-name-2024"
+    type = string
+#    default = "temp-terraform-state-bucket-name-2024-dev"
     description = "Terraform state bucket"
 }
 
