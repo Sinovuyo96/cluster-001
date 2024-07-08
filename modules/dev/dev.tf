@@ -4,7 +4,7 @@ module "eks-cluster-us-east-1" {
     
   # Networking configs
   vpc_id                      = "vpc-00030f56014018499"
-  subnet_ids                  = ["subnet-095e01e5444585e4e", "vpc-00030f56014018499"]
+  subnet_ids                  = ["subnet-095e01e5444585e4e", "subnet-085bd087e28978b7d"]
     
   # eks cluster settings      
   cluster_name                = "cluster-001"
