@@ -3,8 +3,8 @@ module "eks-cluster-us-east-1" {
   terraform_state_bucket_name = "temp-terraform-state-bucket-name-2024"
     
   # Networking configs
-  vpc_id                      = "vpc-04d508730bd2b0d34"
-  subnet_ids                  = ["subnet-0be6510a6455338bc", "subnet-04b845655f3ebeba0"]
+  vpc_id                      = "vpc-00030f56014018499"
+  subnet_ids                  = ["subnet-095e01e5444585e4e", "vpc-00030f56014018499"]
     
   # eks cluster settings      
   cluster_name                = "cluster-001"
