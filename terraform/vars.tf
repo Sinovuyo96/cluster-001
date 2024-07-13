@@ -17,7 +17,7 @@ variable "vpc_id" {
 }
 
 variable "region" {
-    type       = list(string)
+    type       = string
     description = "Cluster region"
     default     = "us-east-1"
 }
