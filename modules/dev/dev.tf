@@ -11,10 +11,10 @@ module "eks-cluster-us-east-1" {
   node_group_name             = "node-group-001"
   
   # ingress alb service account
-  aws_alb_serv_account_name   = "aws-load-balancer-controller"
+#  aws_alb_serv_account_name   = "aws-load-balancer-controller"
 #  namespace                   = "kube-system"
-  role_name                   = "AmazonEKSLoadBalancerControllerRole"
-  svc_acc_policy              = "AWSLoadBalancerControllerIAMPolicy"
+#  role_name                   = "AmazonEKSLoadBalancerControllerRole"
+#  svc_acc_policy              = "AWSLoadBalancerControllerIAMPolicy"
 }
 
 #temp/remove after testing
