@@ -6,6 +6,9 @@ resource "aws_iam_policy" "eks_policy" {
   name        = "eks_policy"
   path        = "/"
   description = "eks policy"
+  depends_on = [
+      aws_s3_bucket.terraform_state
+    ]
 }
 ############
 # EKS ROLE #
@@ -18,6 +21,10 @@ resource "aws_iam_role" "eks_cluster_and_eks_nodes_role" {
   tags = {
     tag-key = "dev"
   }
+
+depends_on = [
+      aws_s3_bucket.terraform_state
+    ]
 }
 
 
