@@ -17,7 +17,3 @@ module "eks-cluster-us-east-1" {
 #  svc_acc_policy              = "AWSLoadBalancerControllerIAMPolicy"
 }
 
-#temp/remove after testing
-provider "aws" {
-  region = "us-east-1"
-}
