@@ -2,7 +2,7 @@
 #terraform State   #
 ###################
 resource "aws_s3_bucket" "terraform_state" {
- bucket = "${var.terraform_state_bucket_name}-${var.region}
+ bucket = "${var.terraform_state_bucket_name}-${var.region}"
  force_destroy = true
  versioning {
    enabled = true
