@@ -40,22 +40,22 @@ variable "node_group_name" {
 # aws alb service account settings
 #######################################
 
- variable "aws_alb_serv_account_name" {
-     type = string
+# variable "aws_alb_serv_account_name" {
+#     type = string
 #     default = "aws-load-balancer-controller"
- } 
+# } 
 
  #variable "namespace" {
  #    type = string
  #    default = "kube-system"
  #}
 
- variable "role_name" {
-     type = string
+# variable "role_name" {
+#     type = string
  #    default = "AmazonEKSLoadBalancerControllerRole"
- }
- variable "svc_acc_policy" {
-     type = string
+# }
+# variable "svc_acc_policy" {
+#     type = string
  #    default = "AWSLoadBalancerControllerIAMPolicy"
- }
+# }
 
