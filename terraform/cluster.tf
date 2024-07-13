@@ -39,6 +39,7 @@ data "aws_vpc" "selected" {
 resource "aws_eks_cluster" "dev_cluster" {
   name     = var.cluster_name
   role_arn = aws_iam_role.eks_cluster_and_eks_nodes_role.arn
+  version = "v1.27"
 
   vpc_config {
     subnet_ids = var.subnet_ids
