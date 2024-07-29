@@ -1,9 +1,9 @@
-name: Terraform CI/CD
+name: DEV Terraform CI/CD
 
 on:
   push:
     branches:
-      - production
+      - development
 jobs:
   job1:
     runs-on: ubuntu-latest
