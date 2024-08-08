@@ -64,8 +64,8 @@ output "endpoint" {
 
 output "kubeconfig-certificate-authority-data" {
   value = aws_eks_cluster.eks_cluster.certificate_authority[0].data
-depends_on = [aws_cloudwatch_log_group.example]
+depends_on = [aws_cloudwatch_log_group.cluster_logging]
 
-  enabled_cluster_log_types = ["api", "audit"]
+  enabled_cluster_log_types = ["api", "audit", "scheduler", "authenticator"]
   name                      = var.cluster_name
 }
