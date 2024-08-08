@@ -59,7 +59,7 @@ resource "aws_eks_cluster" "eks_cluster" {
 
 
 output "endpoint" {
-  value = aws_eks_cluster.dev_cluster.endpoint
+  value = aws_eks_cluster.eks_cluster.endpoint
 }
 
 output "kubeconfig-certificate-authority-data" {
