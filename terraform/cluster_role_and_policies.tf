@@ -6,9 +6,9 @@ resource "aws_iam_policy" "eks_policy" {
   name        = "eks_policy"
   path        = "/"
   description = "eks policy"
-  depends_on = [
-      aws_s3_bucket.terraform_state
-    ]
+#  depends_on = [
+#      aws_s3_bucket.terraform_state
+#    ]
 }
 ############
 # EKS ROLE #
