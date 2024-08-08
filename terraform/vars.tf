@@ -2,11 +2,10 @@
 # s3 Temp bucket
 ############################
 
-variable "terraform_state_bucket_name" {
-    type = string
-#    default = "temp-terraform-state-bucket-name-2024-dev"
-    description = "Terraform state bucket"
-}
+#variable "terraform_state_bucket_name" {
+#    type = string
+#    description = "Terraform state bucket"
+#}
 
 ####################################
 # EKS networking config
