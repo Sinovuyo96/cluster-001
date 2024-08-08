@@ -7,6 +7,14 @@
 #    description = "Terraform state bucket"
 #}
 
+###################
+# Cluster Logging
+###################
+variable "clw-logs" {
+    type = string
+    description = "cluster logging"
+}
+
 ####################################
 # EKS networking config
 ####################################
