@@ -53,8 +53,8 @@ resource "aws_eks_cluster" "eks_cluster" {
     aws_iam_role_policy_attachment.example-AmazonEKS_CNI_Policy,
     aws_iam_role_policy_attachment.example-AmazonEC2ContainerRegistryReadOnly,
     aws_iam_role_policy_attachment.example-AmazonEKSWorkerNodePolicy,
+    aws_cloudwatch_log_group.cluster_logging,
   ]
-depends_on = [aws_cloudwatch_log_group.cluster_logging]
 
   enabled_cluster_log_types = ["api", "audit", "scheduler", "authenticator"]
 }
