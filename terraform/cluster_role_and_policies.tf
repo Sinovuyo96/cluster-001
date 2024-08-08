@@ -22,10 +22,10 @@ resource "aws_iam_role" "eks_cluster_and_eks_nodes_role" {
     tag-key = "dev"
   }
 
-depends_on = [
-      aws_s3_bucket.terraform_state
-    ]
-}
+#depends_on = [
+#      aws_s3_bucket.terraform_state
+#    ]
+#}
 
 
 data "aws_iam_policy_document" "iam_role_trust_policy" {
