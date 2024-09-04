@@ -1,5 +1,5 @@
 resource "aws_cloudwatch_log_group" "cluster_logging" {
-  name = "var.clw-logs"
+  name = var.clw-logs
 
   tags = {
     Environment = "production"
